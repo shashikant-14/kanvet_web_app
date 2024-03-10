@@ -1,21 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../../assets/Logo.png'
+import { NavLink, useLocation } from 'react-router-dom';
+import Logo from '../../assets/Logo.png';
 
 const Header = () => {
+  const location = useLocation();
+
   const menuTextStyle = {
     fontWeight: 400,
     fontSize: 'larger',
-    color: 'rgb(69, 140, 170)',
-    marginRight:'50px'
-    
+    color: 'rgb(20, 130, 160)',
+    marginRight: '50px',
   };
 
+  const activeStyle = {
+    fontWeight: 400,
+    fontSize: 'larger',
+    color: 'rgb(20, 130, 160)',
+    marginRight: '50px',
+    // textDecoration: 'underline rgb(217, 190, 136) 500'
+    paddingBottom:'0px',
+    borderBottom:'5px rgb(217, 190, 136) solid'
+  }
+
   return (
-    <nav className='navbar navbar-expand-lg navbar-white bg-white py-3'>
+    <nav className='navbar navbar-expand-lg navbar-light bg-white py-3'>
       <div className='container d-flex justify-content-between align-items-center px-5'>
         <div className='navbar-brand'>
-          <img width='60%' src={Logo}/>
+          <img src={Logo} alt='Logo' style={{ width: '100%', maxWidth: '150px' }} />
         </div>
 
         <button
@@ -32,18 +43,18 @@ const Header = () => {
 
         <div className='collapse navbar-collapse flex-row-reverse' id='navbarNav'>
           <div className='navbar-nav ml-auto'>
-            <Link to='/home' className='nav-link' style={menuTextStyle}>
+            <NavLink to='/home' className='nav-link' style={location.pathname == '/home' ? activeStyle : menuTextStyle}>
               Home
-            </Link>
-            <Link to='/about' className='nav-link' style={menuTextStyle}>
+            </NavLink>
+            <NavLink to='/about' className='nav-link' style={location.pathname == '/about' ? activeStyle : menuTextStyle}>
               About
-            </Link>
-            <Link to='/products' className='nav-link' style={menuTextStyle}>
+            </NavLink>
+            <NavLink to='/products' className='nav-link' style={location.pathname == '/products' ? activeStyle : menuTextStyle}>
               Products
-            </Link>
-            <Link to='/contact' className='nav-link' style={menuTextStyle}>
+            </NavLink>
+            <NavLink to='/contact' className='nav-link' style={location.pathname == '/contact' ? activeStyle : menuTextStyle}>
               Contact
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
