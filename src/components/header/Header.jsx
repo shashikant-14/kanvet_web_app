@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-white py-1'>
+    <nav className='navbar navbar-expand-lg navbar-light bg-white py-1 position-sticky top-0'>
       <div className='container d-flex justify-content-between align-items-center px-5'>
         <div className='navbar-brand'>
           <img src={Logo} alt='Logo' style={{ width: '100%', maxWidth: '150px' }} />
