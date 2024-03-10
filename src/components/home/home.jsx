@@ -3,9 +3,16 @@ import Front from '../../assets/Front.png';
 
 const Home = () => {
   return (
-    <div className='row text-center p-0 m-0'>
+    <div className='row p-0 m-0'>
       <div className='col-12 p-0 m-0'>
-        <img src={Front} className='img-fluid border-0 p-0 m-0' style={{ width: '100%', height: '550px' }} alt='Kanvet Front Logo' title='Kanvet Front Logo' />
+        <img src={Front} style={{ width: '100%', height: '550px' }} alt='Kanvet Front Logo' title='Kanvet Front Logo' />
+      </div>
+      <div className='col-12'>
+        <div className='col-4 m-5 py-5'>
+          <h1 style={{ color: 'rgb(20, 130, 160)', fontWeight:'700', position:'relative'}}>KANVET HEALTHCARE <span style={{position:'absolute', width:'50%', borderBottom: '6px solid rgb(252, 215, 144)', top:45, left:0, bottom:0}}></span></h1>
+          <p style={{ margin:'25px 0px', fontWeight:'600' }}>Welcome to KANVET HEALTHCARE, a distinguished veterinary feed supplement manufacturer with over two decades of experience, enhancing cattle's health and growth. Based in Pune, Maharashtra, India, our commitment is to provide top-notch products for the dairy industry.</p>
+          <span className='px-4 py-2' style={{borderRadius:'20px', backgroundColor:'rgb(252, 215, 144)'}}>Read More</span>
+        </div>
       </div>
     </div>
   );
