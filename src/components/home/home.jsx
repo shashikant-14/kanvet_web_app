@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className='row p-0 m-0'>
       <div className='col-12 p-0 m-0'>
-        <img src={Front} style={{ width: '100%', height: '550px' }} alt='Kanvet Front Logo' title='Kanvet Front Logo' />
+        <img src={Front} style={{ width: '100%'}} alt='Kanvet Front Logo' title='Kanvet Front Logo' />
       </div>
       <div className='col-12'>
         <div className='col-4 m-5 py-5'>
